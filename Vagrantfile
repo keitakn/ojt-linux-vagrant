@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # 同階層に設置してある関連リポジトリを共有ディレクトリとしてマウント
   %w(
     ojt-node
+    ojt-php
   ).each do |dir|
     config.vm.synced_folder "../#{dir}", "/home/vagrant/#{dir}" if  File.exist?("../#{dir}")
   end
